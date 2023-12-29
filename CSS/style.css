@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat&family=Poppins&family=Roboto&family=Ubuntu&family=Varela+Round&display=swap');
+@font-face {
+    font-family: 'MiSans';
+    src: url('../font/MiSans-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+:root{
+    --back-screen: #C7C9E2;
+    --bg-color-1: #F4F4FD;
+    --bg-color-2: #DFDDF3;
+    --logo-bg: #CB5D5C;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'MiSans';
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    background: var(--back-screen);
+    width: 629px;
+    height: 472px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.screen-container{
+    Width: 547px;
+    Height: 405px;
+    background: linear-gradient(45deg , var(--bg-color-1), var(--bg-color-2));
+    border-radius: 27px;
+    display: flex;
+    /* align-items: center; */
+}
+.left-live-section{
+    width: 370px;
+    height: 100%;
+}
+.upper-bar-section{
+    width: 370px;
+    height: 225px;
+    display: flex;
+}
+.home-bar{
+    width: 75px;
+    height: 220px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 16px;
+}
+.logo{
+    width: 44px;
+    height: 16px;
+    color: #000;
+    font-family: 'MiSans';
+    font-size: 11.562px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16.372px;
+    letter-spacing: 2.023px;
+    text-transform: capitalize;
+}
+.nav-list{
+    width: 75px;
+    height: 30.78px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    color: #000; 
+    font-family: 'MiSans';
+    font-size: 5.147px;
+    font-weight: 700;
+}
+.nav-list .nav-title{
+    width: 100%;
+    height: 7px;
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+}
+.nav-list  .logos{
+    width: 7.784px;
+    height: 7.784px;
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.logos img{
+    width: 5.784px;
+    height: 5.784px;
+}
+.nav-title:hover .logos > img{
+    width: 4.85px;
+    height: 4.85px;
+}
+.nav-title:hover .logos{
+    background: var(--logo-bg);
+}
+.song-play-section{
+    width: 300px;
+    height: 180px;
+    margin-top: 40px;
+    display: flex;
+    margin-left: 1rem;
+}
+.song-name-section{
+    width: 120px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 40px 5px;
+}
+.song-title{
+    height: 48px;
+    width: 79px;
+    display: flex;
+    flex-direction: column;
+}
+.song-title h1{
+    color: #000;
+    font-family: 'MiSans';
+    font-size: 16.972px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24.032px;
+    letter-spacing: 0.933px;
+}
+.song-name{
+    height: 10px;
+    width: 53px;
+}
+.song-name h3{
+    color: #000;
+    font-family: 'MiSans';
+    font-size: 7.31px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+}
+.song-lyrics{
+    width: 92px;
+    height: 27px;
+    /* background: red; */
+}
+.song-lyrics p{
+    color: #B7B7C1;
+    font-family: 'MiSans';
+    font-size: 6.121px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 8.667px;
+    letter-spacing: 0.337px;
+    text-transform: capitalize;
+}
+
+.seekbar-container{
+    width: 180px;
+    height: 100%;
+}
+.song-seekbar{
+    position: relative;
+    width: 159px;
+    height: 159px;
+    border-radius: 50%;
+    background: conic-gradient(#E85353 2deg, #9C9BBB 0deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.song-seekbar::before{
+    content: "";
+    position: absolute;
+    height: 147px;
+    width: 147px;
+    border-radius: 50%;
+    background: url(../images/singer-photo.jpg) ;
+    background-size: cover;
+}
+.song-seekbar > img{
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.40);
+}
+.play-button {
+    position: relative;
+    top: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    background: #FFBE0F;
+    cursor: pointer;
+}
+.play-button img{
+    width: 34.17px;
+    height: 34.17px;
+}
+.song-and-album{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 54px;
+}
+.current-song{
+    width: 110px;
+    height: 131px;
+    background: linear-gradient(#CD3C61, #334AC5);
+    border-radius: 19px;
+    box-shadow: 0px 4px 9px 2px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.song-image{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-top: 1rem;
+}
+.song-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-position: cover;
+}
+.current-song-name {
+    width: 43px;
+    height: 11px;
+    color: #F8B6E6;
+    font-family: 'MiSans';
+    font-size: 7.425px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 10.514px;
+    text-transform: capitalize;
+}
+.singer-name{
+    width: 28px;
+    height: 5px;
+    color: #BC80BE;
+    font-family: 'MiSans';
+    font-size: 3.25px;
+    font-weight: 400;
+    line-height: 5.303px;
+    text-transform: capitalize;
+}
+.song-gif {
+    width: 67px;
+    height: 12px;
+    margin: 16px 0 14px 0;
+    display: flex;
+    justify-content: center;
+}
+.controller{
+    width: 72px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+.controller .prev , .next{
+    width: 14px;
+    height: 14px;
+    background: #9398D7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* align-items: center; */
+}
+.controller .prev img, .next img{
+    width: 10px;
+    height: 10px;
+}
+.controller .play{
+    width: 23.33px;
+    height: 23.33px;
+    background: #EE7373;
+    border-radius: 50%;
+    text-align: center;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+.play img{
+    width: 11px;
+    height: 11px;
+    padding-left: 2px;
+}
+
+.album{
+    width: 83px;
+    height: 110px;
+    background: #F0F0FA;
+    box-shadow: 0px 4px 9px 2px rgba(0, 0, 0, 0.25);    border-radius: 14px;
+    padding: 12px 30px 42px 12px;
+}
+.album .album-number{
+    width: 23px;
+    height: 27px;
+    color: #000;
+    font-family: 'MiSans';
+    font-size: 18.995px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26.896px;
+    text-transform: capitalize;
+}
+.album .album-name{
+    width: 41px;
+    height: 30px;
+    color: #000;
+    font-family: 'MiSans';
+    font-size: 6.905px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 9.777px;
+    text-transform: capitalize;
+}
+.right-download-section{
+    width: 177px;
+    height: 100%;
+    /* background: red; */
+}
+.downloaded-songs{
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+}
+.setting-and-profile{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-top: 35px;
+}
+.setting , .notification{
+    width: 11px;
+    height: 11px;
+    margin: 0 6px;
+}
+.profile{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin: 0 3px;
+}
+.setting-and-profile p{
+    width: 28px;
+    height: 5px;
+    color: #000;
+    font-family: 'MiSans';
+    font-size: 3.792px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 5.37px;
+    letter-spacing: 0.209px;
+    text-transform: capitalize;
+}
+.downloads{
+    width: 56px;
+    height: 16px;
+    color: #000;
+    font-family: 'MiSans';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-left: 29px;
+}
+.download-songs{
+    width: 154px;
+    height: 305px;
+    margin: 22px 0px 0px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+.song{
+    width: 142px;
+    height: 31px;
+    border-radius: 9px;
+    background: #EDEBF6;
+    box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.10);
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    padding: 6px;
+    cursor: pointer;
+    /* margin-right: 13px; */
+}
+.song:hover{
+    width: 184px;
+    height: 44px;
+}
+.song:hover .singer{
+    width: 30px;
+    height: 30px;
+}
+.song:hover h6{
+    width: 55px;
+    height: 10px;
+    font-size: 6.905px;
+}
+.song:hover p{
+    font-size: 6px;
+    width: 50px;
+    height: 10px;
+}
+.song:hover .download-icon{
+    width: 30px;
+    height: 30px;
+}
+
+.song-profile{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.song .singer{
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+}
+.song h6{
+    width: 24px;
+    height: 7px;
+    color: #000;
+    font-family: 'MiSans';
+    font-size: 5.273px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 7.466px;
+    text-transform: capitalize;
+}
+.song p{
+    width: 30px;
+    height: 6px;
+    color: rgba(18, 18, 18, 0.31);
+    font-family: 'MiSans';
+    font-size: 4px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 5.664px;
+    text-transform: capitalize;
+}
+.download-icon{
+    width: 18px;
+    height: 18px;
+}

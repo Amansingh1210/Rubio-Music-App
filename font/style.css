@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Mi Sans (Xiaomi)';
+    src: local('Mi Sans (Xiaomi) Bold'), local('Mi-Sans-(Xiaomi)-Bold'),
+        url('MiSans-Bold.woff2') format('woff2'),
+        url('MiSans-Bold.woff') format('woff'),
+        url('MiSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
